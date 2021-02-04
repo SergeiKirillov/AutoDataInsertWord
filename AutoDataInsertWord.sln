@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoDataInsertWord", "AutoD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadingTimer", "ThreadingTimer\ThreadingTimer.csproj", "{424B10EA-E19E-49AE-983B-92809DC790A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatReportData", "CreatReportData\CreatReportData.csproj", "{DA3B62BB-D614-4C6F-BCC6-4D3FDC1BFF44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{424B10EA-E19E-49AE-983B-92809DC790A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{424B10EA-E19E-49AE-983B-92809DC790A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{424B10EA-E19E-49AE-983B-92809DC790A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA3B62BB-D614-4C6F-BCC6-4D3FDC1BFF44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA3B62BB-D614-4C6F-BCC6-4D3FDC1BFF44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA3B62BB-D614-4C6F-BCC6-4D3FDC1BFF44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA3B62BB-D614-4C6F-BCC6-4D3FDC1BFF44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

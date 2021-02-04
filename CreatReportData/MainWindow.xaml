@@ -1,0 +1,55 @@
+﻿<Window x:Class="CreatReportData.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CreatReportData"
+        mc:Ignorable="d"
+        Title="Занимательная дата" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Ближайшая дата">
+                <TabItem.Content>
+                    <StackPanel>
+                        <Label Content="Ближайшее событие:" FontSize="24" FontStyle="Italic"></Label>
+                        <Label/>
+                        <Label Content="Осталось - "></Label>
+                        <Label></Label>
+                        <Label Content="Скан н поиск миров через:"></Label>
+                        <Label Content="Кол-во циклов поиска миров:"></Label>
+                        <Label></Label>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="Таблица знаменальных дат">
+                
+                <DataGrid Name="dtgMemoryData" AutoGenerateColumns="False" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" Width="780">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Path=A}" MinWidth="50"/>
+                        <DataGridTextColumn Binding="{Binding Path=B}" MinWidth="50"/>
+                        <DataGridTextColumn Binding="{Binding Path=C}" MinWidth="50"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Настройки">
+                <TabItem.Content>
+                    <StackPanel>
+                        <Label/>
+                        <CheckBox Content="Автозагрузка программы при запуске компьютера"></CheckBox>
+                        <CheckBox Content="AвтоСтарт программы при запуске"></CheckBox>
+                        <CheckBox Content="Отображать Word активность"></CheckBox>
+                        <Label/>
+                        <WrapPanel>
+                            <Label Content="Промежуток между сканами:"/>
+                            <Label/>
+                            <TextBox Name="txtTimeScan"></TextBox>
+                        </WrapPanel>
+                        
+                        <Label/>
+                        <Button Name="btnSaveProperty" Width="200" Content="Сохранить настройки"></Button>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

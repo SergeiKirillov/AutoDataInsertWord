@@ -107,6 +107,7 @@ namespace ThreadingTimer
         {
             System.Diagnostics.Debug.WriteLine("+"+txtWordStart+"мин");
 
+
             if (chkListBox.GetItemChecked(3))
             {
                 
@@ -150,6 +151,7 @@ namespace ThreadingTimer
 
         private void UpdateCountdownWord()
         {
+            lblscan.Text = "";
             count = count + 1;
             lblContWordStart.Text = count.ToString();
         }
@@ -185,15 +187,32 @@ namespace ThreadingTimer
                 label2.Text = remaining.Hours + " часов";
                 label3.Text = remaining.Minutes + " минут";
                 label4.Text = remaining.Seconds + " секунд";
+                if (lblscan.Text=="")
+                {
+                    lblscan.Text = (int.Parse(txtWordStart.Text)*60).ToString();
+                }
+                else
+                {
+                    lblscan.Text = (int.Parse(lblscan.Text) - 1).ToString();
+                }
+                
             }
 
         }
 
         private void btnStartTimer_Click(object sender, EventArgs e)
         {
-            lblText.Text = txtText.Text;
+            lblText.Text = "До "+txtDay.Text+"."+txtMount.Text+"."+txtYear.Text+ " осталось:"  ;
             eventDate = new DateTime(int.Parse(txtYear.Text), int.Parse(txtMount.Text), int.Parse(txtDay.Text), 
                 int.Parse(txtHours.Text), int.Parse(txtMin.Text), 0);
+            DateTime dtNow = DateTime.Now;
+
+            if ((eventDate.CompareTo(dtNow))<=0)
+            {
+                eventDate=dtNow.AddDays(+1);
+                MessageBox.Show("Знаменательная дата меньше или равна текущей дате");
+                
+            }
 
             
 

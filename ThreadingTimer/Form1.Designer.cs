@@ -57,6 +57,8 @@
             this.txtText = new System.Windows.Forms.TextBox();
             this.chkListBox = new System.Windows.Forms.CheckedListBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblscan = new System.Windows.Forms.Label();
             this.tabPersonalData.SuspendLayout();
             this.tabData.SuspendLayout();
             this.tabSetting.SuspendLayout();
@@ -65,7 +67,7 @@
             // lblContWordStart
             // 
             this.lblContWordStart.AutoSize = true;
-            this.lblContWordStart.Location = new System.Drawing.Point(165, 179);
+            this.lblContWordStart.Location = new System.Drawing.Point(180, 179);
             this.lblContWordStart.Name = "lblContWordStart";
             this.lblContWordStart.Size = new System.Drawing.Size(0, 13);
             this.lblContWordStart.TabIndex = 6;
@@ -83,6 +85,8 @@
             // 
             // tabData
             // 
+            this.tabData.Controls.Add(this.lblscan);
+            this.tabData.Controls.Add(this.label10);
             this.tabData.Controls.Add(this.btnStartTimer);
             this.tabData.Controls.Add(this.lblCountWord);
             this.tabData.Controls.Add(this.lblContWordStart);
@@ -114,9 +118,9 @@
             this.lblCountWord.AutoSize = true;
             this.lblCountWord.Location = new System.Drawing.Point(39, 179);
             this.lblCountWord.Name = "lblCountWord";
-            this.lblCountWord.Size = new System.Drawing.Size(120, 13);
+            this.lblCountWord.Size = new System.Drawing.Size(134, 13);
             this.lblCountWord.TabIndex = 11;
-            this.lblCountWord.Text = "Кол-во запусков Word";
+            this.lblCountWord.Text = "Кол-во найденных миров";
             // 
             // lblText
             // 
@@ -124,9 +128,9 @@
             this.lblText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblText.Location = new System.Drawing.Point(18, 21);
             this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(299, 26);
+            this.lblText.Size = new System.Drawing.Size(125, 26);
             this.lblText.TabIndex = 10;
-            this.lblText.Text = "до Нового Года осталось:";
+            this.lblText.Text = "Oсталось:";
             // 
             // label4
             // 
@@ -306,7 +310,7 @@
             this.txtText.Name = "txtText";
             this.txtText.Size = new System.Drawing.Size(377, 20);
             this.txtText.TabIndex = 1;
-            this.txtText.Text = "До 2022 осталось:";
+            this.txtText.Text = "До :";
             // 
             // chkListBox
             // 
@@ -328,6 +332,23 @@
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(39, 151);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(128, 13);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Следующий скан через ";
+            // 
+            // lblscan
+            // 
+            this.lblscan.AutoSize = true;
+            this.lblscan.Location = new System.Drawing.Point(173, 151);
+            this.lblscan.Name = "lblscan";
+            this.lblscan.Size = new System.Drawing.Size(0, 13);
+            this.lblscan.TabIndex = 14;
             // 
             // Form1
             // 
@@ -379,6 +400,8 @@
         private System.Windows.Forms.TextBox txtMin;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtHours;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblscan;
     }
 }
 

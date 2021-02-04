@@ -7,10 +7,15 @@ using System.Threading.Tasks;
 using Word = Microsoft.Office.Interop.Word;
 
 
+//https://www.c-sharpcorner.com/UploadFile/muralidharan.d/how-to-create-word-document-using-C-Sharp/
+//https://docs.microsoft.com/en-us/previous-versions/office/troubleshoot/office-developer/automate-word-create-file-using-visual-c
+//http://csharphelper.com/blog/2014/11/create-a-word-document-in-c/
+
+
 
 //TODO добавить в класс DataInWord ожидания времени закрытия программы Word 
 
-    class DataInWord
+class DataInWord
     {
 
         public int MyWord(string MessageSaveFile, bool SaveWordPage, bool WordVisible)
