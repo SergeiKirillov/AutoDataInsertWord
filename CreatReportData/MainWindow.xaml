@@ -6,6 +6,11 @@
         xmlns:local="clr-namespace:CreatReportData"
         mc:Ignorable="d"
         Title="Занимательная дата" Height="450" Width="800">
+    <Window.Resources>
+        
+        
+    </Window.Resources>
+    
     <Grid>
         <TabControl>
             <TabItem Header="Ближайшая дата">
@@ -22,14 +27,22 @@
                 </TabItem.Content>
             </TabItem>
             <TabItem Header="Таблица знаменальных дат">
+                <StackPanel>
+                    <DataGrid Name="dtgMemoryData" AutoGenerateColumns="False" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" Width="780">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Path=A}" MinWidth="50"/>
+                            <DataGridTextColumn Binding="{Binding Path=B}" MinWidth="50"/>
+                            <DataGridTextColumn Binding="{Binding Path=C}" MinWidth="50"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Name="btnInsertMemory" Content="+" Width="100" Height="100" Template="{DynamicResource RoundButtonTemplate}"  >
+                        
+                    </Button>
+                    <Button Name="temp1" Width="50" Height="50" Style="{DynamicResource rawButtonTemplate}"/>
+                    <Button Name="temp2" Width="20" Height="20" Template="{DynamicResource RoundButtonTemplate}"/>
+                </StackPanel>
                 
-                <DataGrid Name="dtgMemoryData" AutoGenerateColumns="False" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" Width="780">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding Path=A}" MinWidth="50"/>
-                        <DataGridTextColumn Binding="{Binding Path=B}" MinWidth="50"/>
-                        <DataGridTextColumn Binding="{Binding Path=C}" MinWidth="50"/>
-                    </DataGrid.Columns>
-                </DataGrid>
+                
             </TabItem>
             <TabItem Header="Настройки">
                 <TabItem.Content>
